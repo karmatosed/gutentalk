@@ -68,55 +68,61 @@
 					<p>You do not need a special theme to use Gutenberg.</p>
 				</section>
 				<section>
+					<p>Theme exploration: github.com/wordpress/gutenberg-theme</p>
+				</section>
+				<section>
 					<h3>add_theme_support</h3>
 					<pre>
-						<code>
-					add_theme_support( 'gutenberg', array(
-							'wide-images' => true,
-   						'colors' => array(
-							'#0073aa',
-							'#229fd8',
-							'#eee',
-							'#444',
-						),
-					) );
+						<code class="php">
+add_theme_support( 'gutenberg', array(
+		'wide-images' => true,
+  	'colors' => array(
+		'#0073aa',
+		'#229fd8',
+		'#eee',
+		'#444',
+	),
+) );
 					</code>
 				</pre>
 				</section>
 				<section>
 					<h3>Editor styles</h3>
 					<pre>
-						<code>
-						function gutenbergtheme_editor_styles() {
-							wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/gutenberg-styling.css');
-						}
-						add_action( 'enqueue_block_editor_assets', 'gutenbergtheme_editor_styles' );
+						<code class="php">
+function gutenbergtheme_editor_styles() {
+	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/gutenberg-styling.css');
+}
+add_action( 'enqueue_block_editor_assets', 'gutenbergtheme_editor_styles' );
 					</code>
 				</pre>
 				</section>
 				<section>
 					<h3>Templates</h3>
 					<pre>
-						<code>
-							function register_testimonial_type() {
-								$args = array(
-									'public' => true,
-									'label'  => 'Testimonials',
-									'show_in_rest' => true,
-									'template' => array(
-										array( 'core/image', array(
-											'align' => 'left',
-										) ),
-										array( 'core/quote', array(
-											'style' => 2,
-										) ),
-									),
-								);
-							register_post_type( 'testimonial', $args );
-						}
-						add_action( 'init', 'register_testimonial_type' );
+						<code class="php">
+function register_testimonial_type() {
+	$args = array(
+		'public' => true,
+		'label'  => 'Testimonials',
+		'show_in_rest' => true,
+		'template' => array(
+			array( 'core/image', array(
+				'align' => 'left',
+			) ),
+			array( 'core/quote', array(
+				'style' => 2,
+			) ),
+		),
+	);
+	register_post_type( 'testimonial', $args );
+}
+add_action( 'init', 'register_testimonial_type' );
 					</code>
 				</pre>
+				</section>
+				<section>
+					Let's change a theme with this in to see...
 				</section>
 				<section>
 					<h3 class="has-dark-background" data-background="#0084a8">What is a block?</h3>
@@ -140,7 +146,7 @@
 					<h3 class="has-dark-background" data-background="#0084a8">The facts</h3>
 				</section>
 				<section>
-					<h3>You can turn it off with a plugin.</h3>
+					<h4>You can turn it off with a plugin.</h4>
 					<p>Link: wordpress.org/plugins/classic-editor/</p>
 				</section>
 				<section>
@@ -172,10 +178,10 @@
 					<h3 class="has-dark-background" data-background="#0084a8">What now?</h3>
 				</section>
 				<section>
-					<h3>Needs more testing, not just within WordPress.</h3>
+					<h4>Needs more testing, not just within WordPress.</h4>
 				</section>
 				<section>
-					<h3>Needs people to make blocks.</h3>
+					<h4>Needs people to make blocks.</h4>
 				</section>
 				<section>
 					<h4>Tell the team what you are making and doing with Gutenberg.</h4>
