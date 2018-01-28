@@ -28,7 +28,7 @@
 					<h2>Getting to know Gutenberg</h2>
 				</section>
 				<section>
-					<p>Why?..... << add why here</p>
+					<p>Making rich content should be easy, but it isn't right now</p>
 				</section>
 				<section>
 					<p>Gutenberg is the entire publishing experience and it starts with the editor</p>
@@ -91,9 +91,12 @@ add_theme_support( 'gutenberg', array(
 					<pre>
 						<code class="php">
 function gutenbergtheme_editor_styles() {
-	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/gutenberg-styling.css');
+	wp_enqueue_style( 'gutenbergthemeblocks-style',
+  get_template_directory_uri() .
+	'/css/gutenberg-styling.css');
 }
-add_action( 'enqueue_block_editor_assets', 'gutenbergtheme_editor_styles' );
+add_action( 'enqueue_block_editor_assets',
+'gutenbergtheme_editor_styles' );
 					</code>
 				</pre>
 				</section>

@@ -46,6 +46,10 @@ section.has-dark-background {
     font-weight: bold;
 }
 
+.reveal pre{
+	box-shadow: none;
+}
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
